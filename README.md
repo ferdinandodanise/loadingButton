@@ -1,4 +1,4 @@
-# Project Title
+# Loading Button
 
 This is a simple extension of UIButton for make a loading circle inside and in the center of your UIButton. You can also choose color when you start a loading.
 
@@ -9,23 +9,34 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 Just download ExtensionUIButton.swift and add on your project. This an extension of UIButton, so allow you to have the methods on your UIButton outlets.
+The following code add on yourButton outlet a loading animation and stop after 3 seconds.
 
-Ex.
+Example:
 
-// This your UIButton outlet
+```swift
+// This is your UIButton outlet
 @IBOutlet weak var yourButton: UIButton!
 
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
         
-      //Here you can call startLoading method and choose the color for yout loading circle
-       yourButton.startLoading(color: .red)
-  }
-  
-  //For stop the animation just call stopLoading() 
-
-yourButton.stopLoading()
-
+        // Here you can start your loading animation inside yourButton
+        yourButton.startLoading(color: .red)
+              
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let when = DispatchTime.now() + 3 // change 3 to desired number of seconds
+        
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            // Your code with delay
+            self.button.stopLoading()
+        }
+    }
+    
+```
 
 
 ## Contributing
