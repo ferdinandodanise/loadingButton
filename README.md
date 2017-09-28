@@ -2,6 +2,8 @@
 
 This is a simple extension of UIButton for make a loading circle inside and in the center of your UIButton. You can also choose color when you start a loading.
 
+![Demo](Resources/loadingButton.gif)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
