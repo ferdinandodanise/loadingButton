@@ -47,7 +47,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-* **Ferdinando Danise** - *Initial work* - [LoadingButton](https://github.com/fdanise)
+* **Ferdinando Danise** - *Initial work* - (https://github.com/fdanise)
 
 
 ## License
