@@ -23,7 +23,13 @@ extension UIButton {
     }
     
     func stopLoading(){
-        self.layer.removeAllAnimations()
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.alpha = 0
+        }) { (true) in
+            self.layer.removeFromSuperlayer()
+        }
+        
     }
     
     private func shapeLayerOuter(color: UIColor) -> CAShapeLayer{
